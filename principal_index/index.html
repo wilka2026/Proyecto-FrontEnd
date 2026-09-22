@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <script src="../javascript/main.js" defer></script>
 </head>
 <body class="netflix-bg">
 
@@ -22,7 +23,7 @@
     <div class="netflix-card">
       
       <!-- CONTENEDOR 1: INICIO DE SESIÓN -->
-      <div id="login-container" class="auth-box">
+      <div id="login" class="auth-box">
         <h2>Inicia Sesión</h2>
         
         <form id="loginForm" action="ejecicio.html" method="GET" class="form-vertical">
@@ -47,12 +48,12 @@
 
         <!-- Botón/Enlace alternador hacia Registro -->
         <div class="switch-auth-mode">
-          <p>¿Primera vez en VitalFit? <button type="button" id="btn-show-register" class="btn-text-action">Suscríbete ahora.</button></p>
+          <p>¿Primera vez en VitalFit? <button type="button" id="btn-show-register" class="btn-text-action">Registrarse</button></p>
         </div>
       </div>
 
       <!-- CONTENEDOR 2: REGISTRO (Oculto inicialmente, activo con la clase 'active') -->
-      <div id="register-container" class="auth-box hidden">
+      <div id="register" class="auth-box hidden">
         <h2>Únete a VitalFit</h2>
         <p class="subtitle">Paso 1: Crea tu perfil biométrico (Sprint 1)</p>
         
@@ -111,25 +112,6 @@
 
     </div>
 
-  </main>
-
-  <!-- Script para alternar entre Login y Registro -->
-  <script>
-    const loginBox = document.getElementById('login-container');
-    const registerBox = document.getElementById('register-container');
-    const btnShowRegister = document.getElementById('btn-show-register');
-    const btnShowLogin = document.getElementById('btn-show-login');
-
-    btnShowRegister.addEventListener('click', () => {
-      loginBox.classList.add('hidden');
-      registerBox.classList.remove('hidden');
-    });
-
-    btnShowLogin.addEventListener('click', () => {
-      registerBox.classList.remove('hidden');
-      loginBox.classList.remove('hidden');
-    });
-  </script>
-
+  </main>  
 </body>
 </html>
