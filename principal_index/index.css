@@ -2,8 +2,8 @@
    ESTILOS TIPO NETFLIX (VITALFIT)
    ========================================== */
 :root {
-  --primary-color: #e50914; /* Rojo estilo Netflix/Fitness */
-  --primary-hover: #b80710;
+  --primary-color: #1cf308; 
+  --primary-hover: #b80710; /* Rojo estilo Netflix/Fitness */
   --bg-dark: #141414;
   --card-bg: rgba(0, 0, 0, 0.75);
   --input-bg: #333333;
@@ -40,7 +40,7 @@ body.netflix-bg {
 }
 
 .navbar-netflix .logo span {
-  color: var(--primary-color);
+  color: var(--primary-hover);
 }
 
 /* CONTENEDOR CENTRAL */
@@ -122,6 +122,36 @@ body.netflix-bg {
 .form-group select:focus {
   background: #454545;
 }
+/* Estilo para el mensaje de exito*/
+.mensaje-exito {
+  grid-column: 1 / -1;/*se obliga a ocupar todo el espacio*/
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #22c55e; /*verde de exito*/
+  color: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*Spinner dentro del boton*/
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 0.8s linear infinite;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* BOTONES */
 .btn {
@@ -135,12 +165,13 @@ body.netflix-bg {
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--primary-hover);
+  color: whitesmoke;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--primary-color);
+  color: rgb(20, 19, 19);
 }
 
 .btn-full {
